@@ -1,0 +1,30 @@
+﻿@model LancJF.Models.Categoria
+
+@{
+    ViewData["Title"] = "Consultar Categoria";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal alert-info">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info col-md-2">Alterar</a>
+    <a asp-action="Index" class="btn btn-default">Voltar</a>
+</div>
